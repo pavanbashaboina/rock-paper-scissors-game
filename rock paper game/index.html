@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(1, 11, 11);
+        padding-left: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .select-container {
+        display: flex;
+    }
+
+    .select-container img {
+        width: 90px;
+    }
+
+    .select-container button {
+        background: none;
+        border: none;
+        outline: none;
+        border: 3px solid #fff;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .result-container {
+        display: flex
+    }
+
+    .result-container img {
+        width: 40px;
+        margin: 0 10px;
+    }
+
+    .score-container {
+        display: flex;
+        gap: 10px;
+    }
+</style>
+
+
+<body>
+    <h1 style="color: #fff;">Rock Paper Scissors</h1>
+
+    <div class="select-container">
+        <button onclick="game();rock();" id="btn-select"><img src="pngwing.com(2).png" alt=""></button>
+        <button onclick="game();paper()" id="btn-select"><img src="pngwing.com(3).png" alt=""></button>
+        <button onclick="game();scissors()" id="btn-select"><img src="pngwing.com(4).png" alt=""></button>
+    </div>
+
+    <h2 style="color: #fff;" id="you-text"></h2>
+
+    <div class="result-container">
+        <p style="color: #fff;" id="you-name"></p>
+        <img style="outline: none; border: none;" id="emoji-dec" src="" alt="">
+        <img id="emoji-dec-1" src="" alt="">
+        <p style="color: #fff;" id="computer-name"></p>
+    </div>
+
+    <div class="score-container">
+        <p style="color: #fff;" id="wingame"></p>
+        <p style="color: #fff;" id="lostgame"></p>
+        <p style="color: #fff;" id="tiegame"></p>
+    </div>
+    <button onclick="reset()" style="padding: 10px;" >reset scores</button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
